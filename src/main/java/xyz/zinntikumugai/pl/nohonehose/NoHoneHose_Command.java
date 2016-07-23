@@ -116,7 +116,7 @@ public class NoHoneHose_Command implements CommandExecutor {
 	//ヘルプ
 	private void b_help() {
 		for(String s : help) {
-			logs.info( "§b/nohonehose " + s );
+			logs.info("§b/nohonehose " + s );
 		}
 	}
 
