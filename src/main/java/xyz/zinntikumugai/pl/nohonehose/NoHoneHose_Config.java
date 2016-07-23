@@ -24,7 +24,7 @@ public class NoHoneHose_Config {
 
 	public boolean loadConfig() {
 
-		if(!(new File(nhh.getDataFolder() + File.separator + "config.yml").exists())) {
+		if(!( new File(nhh.getDataFolder() + File.separator + "config.yml").exists() )) {
 
 			//デフォルトコピー
 			nhh.saveDefaultConfig();
@@ -34,17 +34,19 @@ public class NoHoneHose_Config {
 		//リロード
 		if(config != null) {
 			nhh.reloadConfig();
+			System.out.println("rerloading!");
 		}
 
 		config        = nhh.getConfig();
 
 		worldname     = config.getString("BlockWorld", "home");
+		System.out.println(worldname);
 		prefix_title  = config.getString("prefix.title", "[NHH] §r");
+		System.out.println(prefix_title);
 		prefix_coloer = config.getString("prefix.coloer", "");
-
+		System.out.println(prefix_coloer);
 
 		return false;
-
 	}
 
 	public String getwroldname() {
@@ -62,5 +64,6 @@ public class NoHoneHose_Config {
 	public String getprefix() {
 		return this.prefix_coloer + this.prefix_title + "§r ";
 	}
+
 
 }
