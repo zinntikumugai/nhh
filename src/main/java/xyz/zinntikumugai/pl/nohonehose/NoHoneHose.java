@@ -16,8 +16,6 @@ public class NoHoneHose extends JavaPlugin {
 		config = new NoHoneHose_Config(this);
 		command = new NoHoneHose_Command(this);
 
-		config.loadConfig();
-
 		this.getCommand("nohonehose").setExecutor(command);
 
 		getServer().getPluginManager().registerEvents(new NoHoneHose_Listerer(), this);

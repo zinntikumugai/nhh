@@ -18,25 +18,29 @@ public class NoHoneHose_Config {
 	public NoHoneHose_Config(final NoHoneHose nhh) {
 		this.nhh = nhh;
 		this.logs = nhh.getLogger();
+
+		this.loadConfig();
 	}
 
 	public boolean loadConfig() {
 
-		if(!(new File(nhh.getDataFolder() + File.separator + "config.yml")).exists()) {
+		if(!(new File(nhh.getDataFolder() + File.separator + "config.yml").exists())) {
 
 			//デフォルトコピー
 			nhh.saveDefaultConfig();
 			logs.info("Default Config file Copied");
 		}
 
+		//リロード
 		if(config != null) {
 			nhh.reloadConfig();
 		}
 
-		config = nhh.getConfig();
-		worldname = config.getString("BlockWorld", "home");
-		prefix_title = config.getString("prefix.title", "[NHH] §r");
-		prefix_coloer = config.getString("prefix.coloer", "§a");
+		config        = nhh.getConfig();
+
+		worldname     = config.getString("BlockWorld", "home");
+		prefix_title  = config.getString("prefix.title", "[NHH] §r");
+		prefix_coloer = config.getString("prefix.coloer", "");
 
 
 		return false;
