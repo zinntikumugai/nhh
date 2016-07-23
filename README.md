@@ -4,3 +4,11 @@
 建築に骨馬必要ですかねぇ  
 いりませんよね  
 ってことで作ってみました～  
+
+詳しくはwikiページを見てください!
+
+#Author
+zinntikumugai
+
+#Licence
+GPL v3.0
