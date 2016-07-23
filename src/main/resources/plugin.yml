@@ -1,0 +1,46 @@
+name: NoHoneHose
+main: xyz.zinntikumugai.pl.nohonehose.NoHoneHose
+version: 0.0.1
+author: zinntikumugai
+
+########################################
+commands: 
+#
+  nohonehose: 
+    permission: nhh.use
+    usage : "/<command> <option> [option...]"
+    
+#########################################
+permissions: 
+#
+  nhh.reload: 
+    default: false
+    children: 
+      nhh.use: true
+#
+  nhh.remvoe: 
+    default: false
+    children: 
+      nhh.use: true
+#
+  nhh.show: 
+    default: false
+    children: 
+      nhh.use: true
+#
+  nhh.help: 
+    default: false
+
+#
+  nhh.use: 
+    default: false
+#
+  nhh.*: 
+    default: false
+    children: 
+      nhh.use: true
+      nhh.relaod: true
+      nhh.remove: true
+      nhh.show: true
+      nhh.help: true
+
