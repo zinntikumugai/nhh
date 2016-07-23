@@ -28,9 +28,9 @@ public class NoHoneHose_Listerer implements Listener {
 
 			if(h.getVariant().equals(Variant.SKELETON_HORSE)) {
 
-				System.out.println("SKELETON HORSE!");
+				//System.out.println("SKELETON HORSE!");
 
-				System.out.println(h.getWorld().getName());
+				//System.out.println(h.getWorld().getName());
 
 				if(
 						isblockworld(h.getWorld()) &&
