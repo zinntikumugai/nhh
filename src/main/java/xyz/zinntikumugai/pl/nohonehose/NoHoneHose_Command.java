@@ -48,8 +48,9 @@ public class NoHoneHose_Command implements CommandExecutor {
 					logs.info("please option");
 				return true;
 			}
+			String tmp = args[0];
 
-			switch(args[0]) {
+			switch( tmp ) {
 
 				case "reload":
 					if(p!=null) {
